@@ -305,6 +305,20 @@ function getParameterValue(req, parameter) {
 
 function convertArrayValue(value, schema) {
   let arrayValue;
+
+  if (Array.isArray(value)) {
+    return value.map((item, index) => {
+      const itemSchema = Array.isArray(schema.items)
+        ? schema.items[index]
+        : schema.items;
+      return convertValue(
+        item,
+        itemSchema,
+        itemSchema ? itemSchema.type : undefined
+      );
+    });
+  }
+
   if (typeof value === "string") {
     try {
       arrayValue = JSON.parse(value);
