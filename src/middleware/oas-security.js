@@ -175,7 +175,7 @@ export default (specDoc) => {
           },
           (ok, errors) => {
             // note swapped results
-            var allowed = !_.isNull(ok) && ok.message === "OK";
+            var allowed = !!ok && ok.message === "OK";
 
             config.logger.debug("    Request allowed: " + allowed);
 
