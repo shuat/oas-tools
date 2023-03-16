@@ -1,6 +1,6 @@
 {
   "name": "@bitbeanllc/oas-tools",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "Swagger validation tools for OpenAPI and OAS.",
   "type": "commonjs",
   "main": "./common/index.js",
@@ -92,9 +92,9 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/oas-tools/oas-tools/issues"
+    "url": "https://github.com/shuat/oas-tools/issues"
   },
-  "homepage": "https://github.com/oas-tools/oas-tools#readme",
+  "homepage": "https://github.com/shuat/oas-tools#readme",
   "directories": {
     "lib": "lib",
     "test": "tests"

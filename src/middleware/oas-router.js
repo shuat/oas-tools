@@ -344,6 +344,8 @@ export default (controllers) => {
       );
     };
     const controllerFn = controller[opID].apply(undefined, [req, res, next]); // execute function by name
-    controllerFn.catch(e =>  next(e))
+    if (controllerFn) {
+      controllerFn.catch((e) => next(e));
+    }
   };
 };
