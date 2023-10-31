@@ -1,6 +1,6 @@
 {
   "name": "@bitbeanllc/oas-tools",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "OAS Tools core library",
   "type": "module",
   "main": "./src/index.js",
