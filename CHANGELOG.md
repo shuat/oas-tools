@@ -1,3 +1,7 @@
+## [3.1.4](https://github.com/oas-tools/oas-tools/compare/v3.1.3...v3.1.4) (2023-10-31)
+
+
+
 ## [3.1.3](https://github.com/oas-tools/oas-tools/compare/v3.1.0...v3.1.3) (2023-10-31)
 
 
