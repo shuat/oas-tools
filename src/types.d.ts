@@ -29,7 +29,7 @@ interface ConfigOptions {
     level: boolean | string;
   };
 }
-declare module "@oas-tools/core" {
+export declare module "@oas-tools/core" {
   function initialize(
     expressApp: import("express").Express,
     initialize: ConfigOptions

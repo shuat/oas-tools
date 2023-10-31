@@ -4,6 +4,7 @@
   "description": "OAS Tools core library",
   "type": "module",
   "main": "./src/index.js",
+  "types": "./src/types.d.ts",
   "exports": {
     ".": "./src/entrypoint.cjs"
   },
@@ -17,7 +18,7 @@
     "lint": "eslint src --ext .mjs --ext .js --ext .cjs",
     "format": "npm run lint -- --fix",
     "test": "mocha ./tests/index.test.js",
-    "cov": "c8 --all -n=src/* -x=src/index_old.js -x=src/entrypoint.cjs --reporter=lcov --reporter=text npm run test"
+    "cov": "c8 --all -n=src/* -x=src/index_old.js -x=src/entrypoint.cjs -x=src/types.d.ts --reporter=lcov --reporter=text npm run test"
   },
   "author": "ISA Group, University of Seville",
   "license": "Apache-2.0",
