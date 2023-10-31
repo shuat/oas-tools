@@ -61,9 +61,10 @@ export class OASRouter extends OASBase {
 
               if (!path) throw new errors.RoutingError(`Controller ${opControllerName} not found`);
 
+              const importedController = await import(pathToFileURL(path));
               tmp[expressPath] = {
                 ...tmp[expressPath],
-                [method.toUpperCase()]: (await import(pathToFileURL(path)))[opId]
+                [method.toUpperCase()]: importedController[opId] ?? importedController.default?.[opId]
               };
 
               if (!tmp[expressPath][method.toUpperCase()])

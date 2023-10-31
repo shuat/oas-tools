@@ -30,3 +30,15 @@ export async function getRequestAsyncThrow(req, res, next) {
   await sleep(1000)
   service.getRequestThrow(req, res, next);
 };
+
+/**
+ * @oastools {method} GET
+ * @oastools {path} /defaultExport
+ */
+async function getDefaultExport(req, res, next) {
+  service.getRequest(req, res, next);
+};
+
+export default {
+  getDefaultExport
+}

@@ -58,6 +58,16 @@ export default () => {
                     assert.deepStrictEqual(err.response.data, {error: "Error: Error raised in async controller"});
                 });
             });
+
+            it('Should route to controller correctly when controller uses default exports', async () => {
+                cfg.useAnnotations = false;
+                await init(cfg);
+  
+                await axios.get('http://localhost:8080/api/v1/oasRouter/defaultExport').then(res => {
+                    assert.equal(res.status, 200);
+                    assert.equal(res.data, 'Test service for router middleware');
+                });
+              });
         });
     });
 }
