@@ -27,7 +27,8 @@ export declare namespace OasTools {
     };
     oasFile: string | Record<string, any>;
     logger: {
-      level: boolean | string;
+      customLogger?: any;
+      level?: boolean | string;
     };
   }
   export function initialize(

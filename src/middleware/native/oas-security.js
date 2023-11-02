@@ -70,7 +70,7 @@ export class OASSecurity extends OASBase {
             }
             if (['http', 'apiKey'].includes(secDef.type)) {
               if (!token) throw new SecurityError(`Missing token for security scheme ${secName}.`);              
-              return [secName, await handlers[secName](token)];
+              return [secName, await handlers[secName](token, secScope, req, res, next)];
             }
           })).then((results) => {
             results.forEach(([secName, result]) => {
