@@ -67,6 +67,9 @@ export function parseBody(body, schema) {
   } else if (schema.not) {
     newSchema.not = parseSchema(schema.not, scope);
   } else if (schema.type === "array") {
+      if (!newSchema.items) { 
+        throw new Error("Array must have items property");
+      }
       newSchema.items = parseSchema(schema.items, scope);
   } else if (schema.type === "object") {
 
