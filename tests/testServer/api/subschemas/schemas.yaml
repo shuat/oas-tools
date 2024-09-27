@@ -1,0 +1,26 @@
+errorModel:
+  type: string
+stringResponse:
+  type: string
+oasParamsResponse:
+  type: object
+  required:
+    - params
+    - body
+  properties:
+    params:
+      type: object
+    body:
+      type: object
+readWriteOnlyResponse:
+  type: object
+  required:
+      - writeOnlyProp
+      - readOnlyProp
+  properties:
+    writeOnlyProp:
+      type: string
+      writeOnly: true
+    readOnlyProp:
+      type: string
+      readOnly: true
