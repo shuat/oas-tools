@@ -81,7 +81,9 @@ export class OASRouter extends OASBase {
       }
       return controllers;
     } catch (err) { // Exception handling
-      throw new errors.RoutingError(err.message);
+      const newErr = new errors.RoutingError(err.message);
+      newErr.stack = err.stack;
+      throw newErr;
     }
   }
 }
